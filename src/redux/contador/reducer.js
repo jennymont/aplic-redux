@@ -1,5 +1,4 @@
 /* eslint-disable import/no-anonymous-default-export */
-
 // eslint-disable-next-line no-unused-vars
 const initial_state = {
      value: 0,
@@ -12,17 +11,12 @@ export default function (state = initial_state, action){
         case 'INCREMENT': 
             return{
                 ...state,
-                value: state.value + state.step
+                value: state.value + action.valorCampo
             }
         case 'DECREMENT':
             return{
                ...state,
-                value: state.value - state.step
-            }
-        case 'STEP_CHANGED':
-            return{
-                ...state,
-                step: +action.payload
+                value: state.value - action.valorCampo
             }
 
         default:

@@ -1,18 +1,14 @@
 
-export function incrementCounter(){
+export function incrementCounter(valorIncrement){
         return {
-            type: 'INCREMENT'
+            type: 'INCREMENT',
+            valorCampo: valorIncrement
         }
     }
 
-export function decrementCounter(){
+export function decrementCounter(valorDecrement){
     return {
-        type: 'DECREMENT'
-    }
-}
-export function stepChanged (e){
-    return{
-        type: 'STEP_CHANGED',
-        payload: e.target.value
+        type: 'DECREMENT',
+        valorCampo: valorDecrement
     }
 }
